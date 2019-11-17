@@ -1,0 +1,34 @@
+CC     = "c:\program files\matlab\r2008a\sys\lcc\bin\lcc.exe"
+LD     = "c:\program files\matlab\r2008a\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "c:\program files\matlab\r2008a\sys\lcc\bin\lcclib.exe"
+CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup
+LDFLAGS = -s -dll -L"c:\program files\matlab\r2008a\sys\lcc\lib"
+LIBFLAGS = 
+
+OBJECTS = \
+	"NonLinearModel_sfun.obj"\
+	"NonLinearModel_sfun_registry.obj"\
+	"c2_NonLinearModel.obj"\
+	"lccstub.obj"\
+	"c:\program files\matlab\r2008a\sys\lcc\mex\lccdef.def"\
+	"c:\program files\matlab\r2008a\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
+	"c:\program files\matlab\r2008a\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
+	"c:\program files\matlab\r2008a\extern\lib\win32\lcc\libmex.lib"\
+	"c:\program files\matlab\r2008a\extern\lib\win32\lcc\libmx.lib"\
+	"c:\program files\matlab\r2008a\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"c:\program files\matlab\r2008a\extern\lib\win32\lcc\libut.lib"\
+	"c:\program files\matlab\r2008a\toolbox\dspblks\lib\win32\dsp_dyn_rt_lcc.lib"\
+
+INCLUDE_PATH= -I"c:\program files\matlab\r2008a\sys\lcc\include"  -I"c:\program files\matlab\r2008a\extern\include"  -I"c:\program files\matlab\r2008a\simulink\include"  -I"c:\program files\matlab\r2008a\stateflow\c\mex\include"  -I"c:\program files\matlab\r2008a\stateflow\c\debugger\include"  -I"c:\program files\matlab\r2008a\toolbox\eml\lib\dsp"  -I"g:\_vyucovani\srl\semestralka\nonlinmodel\slprj\_sfprj\nonlinearmodel\_self\sfun\src"  -I"g:\_vyucovani\srl\semestralka\nonlinmodel" 
+ 
+
+NonLinearModel_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o NonLinearModel_sfun.mexw32 @NonLinearModel_sfun.lmko
+NonLinearModel_sfun.obj :	"NonLinearModel_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "NonLinearModel_sfun.c"
+NonLinearModel_sfun_registry.obj :	"NonLinearModel_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "NonLinearModel_sfun_registry.c"
+c2_NonLinearModel.obj :	"c2_NonLinearModel.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_NonLinearModel.c"
+lccstub.obj :	"c:\program files\matlab\r2008a\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c:\program files\matlab\r2008a\sys\lcc\mex\lccstub.c"
