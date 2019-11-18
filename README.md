@@ -1,5 +1,12 @@
 ## Project: FCS_Project
 
+To get a project from GitHub:
+1. Download git from https://git-scm.com/
+2. Go to the folder you want to have project master directory in
+3. In right click menu and open git bash
+4. Execute `git clone https://github.com/asmialek/FCS_Project` command
+5. In matlab, find and open `FCS_Project.prj`
+
 To compare the models of a Simulink in version control you need to install two Add-Ons:
 - Matlab Report Generator
 - Simulink Report Generator
