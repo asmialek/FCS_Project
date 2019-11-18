@@ -1,12 +1,12 @@
 Model {
   Name			  "SS_F16_Block"
-  Version		  9.3
+  Version		  10.0
   SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.86"
+    ComputedModelVersion    "1.87"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -17,15 +17,17 @@ Model {
     PreCompExecutionDomainType "Unset"
     IsExportFunctionModel   0
     IsArchitectureModel	    0
+    IsAUTOSARArchitectureModel 0
     NumParameterArguments   0
     NumExternalFileReferences 0
     OrderedModelArguments   1
   }
-  DiagnosticSuppressor	  "on"
-  WebScopes_FoundationPlugin "on"
-  SLCCPlugin		  "on"
-  LogicAnalyzerPlugin	  "on"
   NotesPlugin		  "on"
+  DiagnosticSuppressor	  "on"
+  LogicAnalyzerPlugin	  "on"
+  WebScopes_FoundationPlugin "on"
+  AnimationPlugin	  "on"
+  SLCCPlugin		  "on"
   EnableAccessToBaseWorkspace on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -69,11 +71,13 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
+	IsTabbed		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1898.0, 1001.0]
-	ZoomFactor		[1.7499999999999998]
-	Offset			[-99.180798530253981, -39.547875434956609]
+	Extents			[1898.0, 935.0]
+	ZoomFactor		[1.5]
+	Offset			[-245.69539647176686, 11.442600755519663]
+	SceneRectInView		[-245.69539647176686, 11.442600755519663, 1265.3333333333333, 623.33333333333337]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -94,12 +98,15 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAABrAD///8AAAeQAAAEIwAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
-      "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
-      "////wEAAACA/////wAAAAAAAAAA/////wEAAADo/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFo/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAANR/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
+      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAeQAAAD5AAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAA"
+      Array {
+	Type			"Cell"
+	Dimension		0
+	PropName		"PersistedApps"
+      }
+      WindowUuid	      "bc5eb87b-ec0a-4b4c-a58d-2f25973836bf"
     }
+    BDUuid		    "22047154-3a02-49cd-a755-20557866f5cc"
   }
   HideAutomaticNames	  on
   Created		  "Tue Sep 24 12:09:24 2002"
@@ -108,9 +115,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "asmialek"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Nov 04 17:22:58 2019"
-  RTWModifiedTimeStamp	  494788971
-  ModelVersionFormat	  "1.%<AutoIncrement:86>"
+  LastModifiedDate	  "Mon Nov 18 11:31:02 2019"
+  RTWModifiedTimeStamp	  495977458
+  ModelVersionFormat	  "1.%<AutoIncrement:87>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -148,6 +155,12 @@ Model {
   BrowserLookUnderMasks	  off
   MultiThreadCoSim	  on
   SimulationMode	  "normal"
+  SILPILModeSetting	  "automated"
+  SILPILSystemUnderTest	  "topmodel"
+  SILPILSimulationModeTopModel "normal"
+  SILPILSimulationModeModelRef "normal"
+  SimTabSimulationMode	  "normal"
+  CodeVerificationMode	  "software-in-the-loop (sil)"
   PauseTimes		  "5"
   NumberOfSteps		  1
   SnapshotBufferSize	  10
@@ -209,7 +222,7 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      8
-      Version		      "19.0.0"
+      Version		      "19.1.1"
       DisabledProps	      []
       Description	      ""
       Array {
@@ -217,7 +230,7 @@ Model {
 	Dimension		9
 	Simulink.SolverCC {
 	  $ObjectID		  9
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -260,7 +273,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  10
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -302,10 +315,10 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  11
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
-	    Dimension		    8
+	    Dimension		    9
 	    Cell		    "BooleansAsBitfields"
 	    Cell		    "PassReuseOutputArgsAs"
 	    Cell		    "PassReuseOutputArgsThreshold"
@@ -314,6 +327,7 @@ Model {
 	    Cell		    "OptimizeModelRefInitCode"
 	    Cell		    "NoFixptDivByZeroProtection"
 	    Cell		    "UseSpecifiedMinMax"
+	    Cell		    "EfficientTunableParamExpr"
 	    PropName		    "DisabledProps"
 	  }
 	  Description		  ""
@@ -363,17 +377,18 @@ Model {
 	  OptimizeDataStoreBuffers on
 	  BusAssignmentInplaceUpdate on
 	  DifferentSizesBufferReuse off
+	  UseRowMajorAlgorithm	  off
 	  OptimizationLevel	  "level2"
 	  OptimizationPriority	  "Balanced"
 	  OptimizationCustomize	  on
-	  UseRowMajorAlgorithm	  off
 	  LabelGuidedReuse	  off
 	  MultiThreadedLoops	  off
 	  DenormalBehavior	  "GradualUnderflow"
+	  EfficientTunableParamExpr off
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  12
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    1
@@ -495,7 +510,7 @@ Model {
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  13
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -545,7 +560,7 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  14
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -565,7 +580,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  15
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -595,11 +610,12 @@ Model {
 	  MATLABDynamicMemAllocThreshold 65536
 	  CustomCodeFunctionArrayLayout	[]
 	  DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+	  CustomCodeUndefinedFunction "UseInterfaceOnly"
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  16
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    16
@@ -621,6 +637,7 @@ Model {
 	    Cell		    "CodeProfilingInstrumentation"
 	    PropName		    "DisabledProps"
 	  }
+	  Description		  ""
 	  SystemTargetFile	  "grt.tlc"
 	  HardwareBoard		  "None"
 	  ShowCustomHardwareApp	  off
@@ -633,7 +650,6 @@ Model {
 	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
 	  PostCodeGenCommand	  ""
-	  Description		  ""
 	  GenerateReport	  off
 	  RTWVerbose		  on
 	  RetainRTWFile		  off
@@ -688,7 +704,7 @@ Model {
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      17
-	      Version		      "19.0.0"
+	      Version		      "19.1.1"
 	      Array {
 		Type			"Cell"
 		Dimension		28
@@ -773,11 +789,12 @@ Model {
 	      ReqsInCode	      off
 	      UseSimReservedNames     off
 	      ReservedNameArray	      []
+	      EnumMemberNameClash     "error"
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      18
-	      Version		      "19.0.0"
+	      Version		      "19.1.1"
 	      Array {
 		Type			"Cell"
 		Dimension		16
@@ -884,7 +901,7 @@ Model {
 	}
 	SlCovCC.ConfigComp {
 	  $ObjectID		  19
-	  Version		  "19.0.0"
+	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
 	  Components		  []
@@ -1022,6 +1039,17 @@ Model {
       PreserveConstantTs      off
     }
     Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      Demux
       Outputs		      "4"
       DisplayOption	      "none"
@@ -1056,7 +1084,7 @@ Model {
       MustResolveToSignalObject	off
       OutputWhenUnConnected   off
       OutputWhenUnconnectedValue "0"
-      VectorParamsAs1DForOutWhenUnconnected off
+      VectorParamsAs1DForOutWhenUnconnected on
     }
     Block {
       BlockType		      Scope
@@ -1167,9 +1195,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "175"
+    ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "201"
+    SIDHighWatermark	    "204"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      SubSystem
@@ -1245,6 +1273,7 @@ Model {
 	  Position		  [125, 78, 155, 92]
 	  ZOrder		  -5
 	  IconDisplay		  "Port number"
+	  VectorParamsAs1DForOutWhenUnconnected	off
 	}
 	Line {
 	  ZOrder		  1
@@ -1294,6 +1323,15 @@ Model {
       Position		      [300, 410, 330, 440]
       ZOrder		      7
       Value		      "[trim_thrust; trim_control(1); trim_control(2); trim_control(3)]"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion"
+      SID		      "203"
+      Position		      [600, 473, 675, 507]
+      ZOrder		      8
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Demux
@@ -1452,6 +1490,7 @@ Model {
 	  Position		  [125, 78, 155, 92]
 	  ZOrder		  -5
 	  IconDisplay		  "Port number"
+	  VectorParamsAs1DForOutWhenUnconnected	off
 	}
 	Line {
 	  ZOrder		  1
@@ -1569,6 +1608,7 @@ Model {
 	  Position		  [125, 78, 155, 92]
 	  ZOrder		  -5
 	  IconDisplay		  "Port number"
+	  VectorParamsAs1DForOutWhenUnconnected	off
 	}
 	Line {
 	  ZOrder		  1
@@ -2018,13 +2058,6 @@ Model {
       }
     }
     Line {
-      ZOrder		      32
-      SrcBlock		      "Sum1"
-      SrcPort		      1
-      DstBlock		      "To Workspace1"
-      DstPort		      1
-    }
-    Line {
       ZOrder		      60
       SrcBlock		      "State-Space"
       SrcPort		      1
@@ -2068,6 +2101,29 @@ Model {
       SrcPort		      1
       DstBlock		      "Mux1"
       DstPort		      4
+    }
+    Line {
+      ZOrder		      71
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "To Workspace1"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "204"
+      Name		      "i have also added a block"
+      Position		      [580, 456, 695, 471]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+    }
+    Annotation {
+      SID		      "202"
+      Name		      "i\"m adding a cooment"
+      Position		      [400, 456, 498, 471]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
     }
     Annotation {
       SID		      "62"
