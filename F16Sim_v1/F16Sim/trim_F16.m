@@ -91,9 +91,9 @@ end
 
 % For simulink:
 trim_state=xu(1:12);
-trim_thrust=UX(1);
-trim_ele=UX(2);
-trim_ail=UX(4);
-trim_rud=UX(5);
-trim_control=[UX(2);UX(4);UX(5)];
+trim_thrust=xu(13);
+trim_ele=xu(14);
+trim_ail=xu(15);
+trim_rud=xu(16);
+trim_control=[xu(2);xu(4);xu(5)];
 dLEF = xu(17);
