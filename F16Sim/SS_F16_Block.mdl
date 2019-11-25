@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.86"
+    ComputedModelVersion    "1.88"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -48,7 +48,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [8.0, 8.0, 1936.0, 1176.0]
+      Location		      [58.0, 108.0, 1936.0, 1176.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -75,9 +75,9 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1898.0, 935.0]
-	ZoomFactor		[1.5805829888479788]
-	Offset			[-236.45124125403663, -78.889956438374611]
-	SceneRectInView		[-236.45124125403663, -78.889956438374611, 1200.8227428686762, 591.55388018030146]
+	ZoomFactor		[1.7499999999999998]
+	Offset			[-155.024093019804, -22.645921199893422]
+	SceneRectInView		[-155.024093019804, -22.645921199893422, 1084.5714285714287, 534.28571428571433]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -104,9 +104,9 @@ Model {
 	Dimension		0
 	PropName		"PersistedApps"
       }
-      WindowUuid	      "946f1010-fd33-4f94-9faa-80b44a7b775b"
+      WindowUuid	      "7be09516-6ddd-40a5-8311-0b91cfe127f1"
     }
-    BDUuid		    "a7486cb9-244f-4700-88d4-42a914c08425"
+    BDUuid		    "f71becdc-1932-4719-9306-ef93c44fdd4f"
   }
   HideAutomaticNames	  on
   Created		  "Tue Sep 24 12:09:24 2002"
@@ -115,9 +115,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "asmialek"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Nov 18 16:39:11 2019"
-  RTWModifiedTimeStamp	  495995947
-  ModelVersionFormat	  "1.%<AutoIncrement:86>"
+  LastModifiedDate	  "Mon Nov 25 13:31:45 2019"
+  RTWModifiedTimeStamp	  496585543
+  ModelVersionFormat	  "1.%<AutoIncrement:88>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1169,7 +1169,7 @@ Model {
   }
   System {
     Name		    "SS_F16_Block"
-    Location		    [8, 8, 1944, 1184]
+    Location		    [58, 108, 1994, 1284]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1184,16 +1184,16 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "158"
+    ZoomFactor		    "175"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "203"
+    SIDHighWatermark	    "201"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      SubSystem
       Name		      "Aileron Disturbance"
       SID		      "1"
       Ports		      [0, 1]
-      Position		      [-200, 215, -155, 255]
+      Position		      [-140, 230, -95, 270]
       ZOrder		      6
       RequestExecContextInheritance off
       System {
@@ -1299,7 +1299,7 @@ Model {
       BlockType		      Clock
       Name		      "Clock"
       SID		      "7"
-      Position		      [395, 16, 430, 54]
+      Position		      [350, 11, 430, 59]
       ZOrder		      -2
       DisplayTime	      on
       Decimation	      "50"
@@ -1308,7 +1308,7 @@ Model {
       BlockType		      Constant
       Name		      "Control \nTrim"
       SID		      "201"
-      Position		      [140, 410, 170, 440]
+      Position		      [265, 335, 295, 365]
       ZOrder		      7
       Value		      "[trim_thrust; trim_control(1); trim_control(2); trim_control(3)]"
     }
@@ -1400,7 +1400,7 @@ Model {
       Name		      "Elevator Disturbance1"
       SID		      "11"
       Ports		      [0, 1]
-      Position		      [-200, 165, -155, 205]
+      Position		      [-140, 155, -95, 195]
       ZOrder		      5
       RequestExecContextInheritance off
       System {
@@ -1507,7 +1507,7 @@ Model {
       Name		      "Mux1"
       SID		      "17"
       Ports		      [4, 1]
-      Position		      [-20, 113, -15, 307]
+      Position		      [-20, 60, -15, 365]
       ZOrder		      4
       ShowName		      off
       DisplayOption	      "bar"
@@ -1517,7 +1517,7 @@ Model {
       Name		      "Rudder Disturbance"
       SID		      "18"
       Ports		      [0, 1]
-      Position		      [-200, 265, -155, 305]
+      Position		      [-140, 305, -95, 345]
       ZOrder		      3
       RequestExecContextInheritance off
       System {
@@ -1785,24 +1785,10 @@ Model {
     }
     Block {
       BlockType		      Sum
-      Name		      "Sum"
-      SID		      "202"
-      Ports		      [2, 1]
-      Position		      [275, 60, 295, 80]
-      ZOrder		      8
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
       Name		      "Sum1"
       SID		      "32"
       Ports		      [2, 1]
-      Position		      [310, 360, 330, 380]
+      Position		      [335, 285, 355, 305]
       ZOrder		      -17
       NamePlacement	      "alternate"
       ShowName		      off
@@ -1826,7 +1812,7 @@ Model {
       Name		      "To Workspace1"
       SID		      "34"
       Ports		      [1]
-      Position		      [405, 355, 465, 385]
+      Position		      [405, 280, 465, 310]
       ZOrder		      -19
       VariableName	      "controls"
       MaxDataPoints	      "inf"
@@ -1838,7 +1824,7 @@ Model {
       Name		      "To Workspace2"
       SID		      "35"
       Ports		      [1]
-      Position		      [545, 75, 605, 105]
+      Position		      [520, 70, 580, 100]
       ZOrder		      -20
       VariableName	      "simout"
       MaxDataPoints	      "inf"
@@ -1849,7 +1835,7 @@ Model {
       BlockType		      Constant
       Name		      "thrust1"
       SID		      "61"
-      Position		      [-195, 120, -165, 150]
+      Position		      [-135, 85, -105, 115]
       ZOrder		      2
       Value		      "thrust"
       VectorParams1D	      off
@@ -2027,7 +2013,7 @@ Model {
       ZOrder		      59
       SrcBlock		      "Control \nTrim"
       SrcPort		      1
-      Points		      [145, 0]
+      Points		      [45, 0]
       DstBlock		      "Sum1"
       DstPort		      2
     }
@@ -2037,14 +2023,15 @@ Model {
       SrcPort		      1
       Points		      [290, 0]
       Branch {
-	ZOrder			45
-	Points			[0, 160]
-	DstBlock		"Sum1"
+	ZOrder			71
+	Points			[0, -5]
+	DstBlock		"State-Space"
 	DstPort			1
       }
       Branch {
-	ZOrder			44
-	DstBlock		"State-Space"
+	ZOrder			45
+	Points			[0, 80]
+	DstBlock		"Sum1"
 	DstPort			1
       }
     }
@@ -2067,7 +2054,6 @@ Model {
       }
       Branch {
 	ZOrder			23
-	Points			[0, -120]
 	DstBlock		"To Workspace2"
 	DstPort			1
       }
@@ -2101,17 +2087,9 @@ Model {
       DstPort		      4
     }
     Annotation {
-      SID		      "203"
-      Name		      "i added this"
-      Position		      [261, 132, 314, 147]
-      InternalMargins	      [0, 0, 0, 0]
-      HorizontalAlignment     "left"
-      VerticalAlignment	      "top"
-    }
-    Annotation {
       SID		      "62"
       Name		      "npos\nepos\nalt\nphi\ntheta\npsi\nvel\nalpha\nbeta\np\nq\nr\nnx\nny\nnz\nmach\nqbar\nps\n"
-      Position		      [552, 236, 574, 428]
+      Position		      [531, 225, 553, 417]
       InternalMargins	      [0, 0, 0, 0]
       ForegroundColor	      "blue"
       ZOrder		      -1
