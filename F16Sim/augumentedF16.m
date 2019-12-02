@@ -204,9 +204,16 @@ elseif dis_flag == 'n'
 else
     error('Invalid Selection');
 end
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Create a control matrix K
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+size_A = size(A_hi);
+size_B = size(B_hi);
+Q = eye(size_A(2))
+R = eye(size_B(2))
+K = lqr(A_hi, B_hi, Q, R)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Conditions for model
