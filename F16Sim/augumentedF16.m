@@ -207,6 +207,7 @@ TFinal = 20;
 %% Run and save hifi then lofi linearized simulation
 fi_model = 'hifi';
 A = A_hi; B = B_hi; C = C_hi; D = D_hi;
+C = eye(18);
 trim_state = xu_hi;
 trim_thrust = trim_thrust_hi;
 trim_control = trim_control_hi;
