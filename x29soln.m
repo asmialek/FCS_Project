@@ -13,6 +13,8 @@ B = [-0.0006  0.0007;
   
 C = eye(4);
 
+D = zeros(4,2);
+
 %% state-space representation
 xpdot = ss(A,B,C,[]);
 
@@ -23,8 +25,6 @@ xpdot.StateName  = {'p', 'r', '\beta', '\phi'};
 
 Ci = [zeros(2,2) eye(2)]; % tracking (integration) matrix
 
-D = zeros(4,2);
-
 A_aug = [zeros(2,2), Ci  ;
          zeros(4,2),  A ];
 
@@ -34,7 +34,6 @@ Br     = [-eye(2); zeros(4,2)];
 
 % Q = 10*diag([2000 2000 2000 4000 0.5 0.1]);
 % R = 5*diag([0.01 0.5]);
-
 % K = lqr(A_aug, B_aug, Q, R,[]);
 
 Q = 10*diag([2000 2000 2000 4000 0.5 0.1]);
