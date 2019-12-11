@@ -244,15 +244,6 @@ for fi_flag_Simulink = 0:1:1
     trim_file = sprintf('%s%.3f%s%.3f%s%.3f_%smodel_alt%0.f_vel%.0f_LTI.txt', 'ele_', ElevatorDis, 'ail_', AileronDis, 'rud_', RudderDis, fi_model, altitude, velocity);
     fid_trim = fopen(trim_file, 'w');
     
-% 1 time,
-% 3 npos,epos,alt,
-% 3 phi,theta,psi,
-% 3 vel,alpha,beta,
-% 3 p,q,r,
-% 3 nx,ny,nz,
-% 3 mach,qbar,ps,
-% 4 thrust,ele,ail,rud
-% 23 SUM
     heading = sprintf('\ntime,npos,epos,alt,phi,theta,psi,vel,alpha,beta,p,q,r,nx,ny,nz,mach,qbar,ps,thrust,ele,ail,rud\n\n');
     
     fprintf(fid_trim,heading);
@@ -265,8 +256,7 @@ for fi_flag_Simulink = 0:1:1
             fprintf(fid_trim,'%8.5f,',simout(row,column));
         end
         for column = 1:1:length(controls(1,:))
-%             fprintf(fid_trim,'%8.5f,',controls(row,column));
-            fprintf(fid_trim, '0,');
+            fprintf(fid_trim,'%8.5f,',controls(row,column));
         end
         fprintf(fid_trim,'\n');
     end

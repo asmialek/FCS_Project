@@ -177,6 +177,15 @@ Q_pr = 10*diag([ 2000 0.5 0.2 200 ]);
 R_pr = 100;
 K_pr = lqr(A_aug_pr, B_aug_pr, Q_pr, R_pr);
 
+%% Create a longitude controller
+Ci_long = [ 1 0 0 ]; % Tracking of `q cmd` value
+A_aug_long = [          0  Ci_pr ;
+               zeros(3,1)  A_pr ];
+B_aug_long = [          0; B_pr ];
+
+Q_long = 10*diag([ 2000 0.5 0.2 200 ]);
+R_long = 100;
+K_long = lqr(A_aug_long, B_aug_long, Q_long, R_long);
 
 % %% Create a control matrix K
 % size_A = size(A_hi);
