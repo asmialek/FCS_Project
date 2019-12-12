@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.60"
+    ComputedModelVersion    "1.62"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -100,9 +100,9 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1820.0, 806.0]
-	  ZoomFactor		  [1.219435736677116]
-	  Offset		  [110.1677377892031, 196.51928020565555]
-	  SceneRectInView	  [110.1677377892031, 196.51928020565555, 1492.4935732647814, 660.9614395886889]
+	  ZoomFactor		  [1.5]
+	  Offset		  [203.75761369527288, 433.64987146529563]
+	  SceneRectInView	  [203.75761369527288, 433.64987146529563, 1213.3333333333333, 537.33333333333337]
 	}
 	Object {
 	  $ObjectID		  6
@@ -200,9 +200,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "asmialek"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Dec 11 19:41:29 2019"
-  RTWModifiedTimeStamp	  497994087
-  ModelVersionFormat	  "1.%<AutoIncrement:60>"
+  LastModifiedDate	  "Thu Dec 12 18:53:55 2019"
+  RTWModifiedTimeStamp	  498077634
+  ModelVersionFormat	  "1.%<AutoIncrement:62>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -1337,7 +1337,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "122"
+    ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "171"
     SimulinkSubDomain	    "Simulink"
@@ -2592,10 +2592,6 @@ Model {
 	}
 	Line {
 	  Name			  "<alpha>"
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	  ZOrder		  257
 	  Labels		  [0, 0]
 	  SrcBlock		  "Bus\nSelector"
@@ -2605,10 +2601,6 @@ Model {
 	}
 	Line {
 	  Name			  "<q>"
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	  ZOrder		  258
 	  Labels		  [0, 0]
 	  SrcBlock		  "Bus\nSelector"
@@ -2618,10 +2610,6 @@ Model {
 	}
 	Line {
 	  Name			  "<theta>"
-	  FontName		  "Helvetica"
-	  FontSize		  9
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	  ZOrder		  259
 	  Labels		  [0, 0]
 	  SrcBlock		  "Bus\nSelector"
@@ -2964,7 +2952,7 @@ Model {
       Name		      "Radians\nto Degrees"
       SID		      "168"
       Ports		      [1, 1]
-      Position		      [1230, 627, 1255, 633]
+      Position		      [1230, 624, 1260, 636]
       ZOrder		      188
       LibraryVersion	      "1.67"
       SourceBlock	      "simulink_extras/Transformations/Radians\nto Degrees"
@@ -2982,7 +2970,7 @@ Model {
       Name		      "Radians\nto Degrees1"
       SID		      "169"
       Ports		      [1, 1]
-      Position		      [1230, 642, 1255, 648]
+      Position		      [1230, 654, 1260, 666]
       ZOrder		      189
       LibraryVersion	      "1.67"
       SourceBlock	      "simulink_extras/Transformations/Radians\nto Degrees"
@@ -3399,31 +3387,31 @@ Model {
       Name		      "Scope7"
       SID		      "165"
       Ports		      [2]
-      Position		      [1335, 621, 1365, 654]
+      Position		      [1335, 613, 1370, 677]
       ZOrder		      185
       BackgroundColor	      "green"
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
-      "',true,'SerializedDisplays',{struct('MinYLimReal','-1.4304','MaxYLimReal','12.87357','YLabelReal','','MinYLimMag"
-      "','0.00000','MaxYLimMag','12.87357','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axe"
-      "sColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666"
-      "666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831"
-      "372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509803921568"
-      "6 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLine"
-      "s',1,'LineNames',{{'theta'}},'ShowContent',true,'Placement',1),struct('MinYLimReal','-1.65232','MaxYLimReal','6."
-      "23837','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.57012','LegendVisibility','Off','XGrid',true,'YGri"
-      "d',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.68627450"
-      "9803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078"
-      "431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235"
-      "294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserD"
-      "efinedChannelNames',{{}},'NumLines',1,'LineNames',{{'q'}},'ShowContent',true,'Placement',2)},'DisplayPropertyDef"
-      "aults',struct('YLabelReal','','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor'"
-      ",[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 "
-      "0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.39215686274509"
-      "8 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'DisplayL"
-      "ayoutDimensions',[2 1]),extmgr.Configuration('Tools','Plot Navigation',true,'PreviousAutoscale','XY'),extmgr.Con"
-      "figuration('Tools','Measurements',true,'Version','2019b')),'Version','2019b','Position',[961 34 960 955])"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-2.52819','MaxYLimReal','13.04893','YLabelReal','','MinYLimMa"
+      "g','0.00000','MaxYLimMag','13.04893','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Ax"
+      "esColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066"
+      "6666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83"
+      "1372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.07450980392156"
+      "86 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLin"
+      "es',1,'LineNames',{{'theta'}},'ShowContent',true,'Placement',1),struct('MinYLimReal','-3.00412','MaxYLimReal','6"
+      ".76867','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.57012','LegendVisibility','Off','XGrid',true,'YGr"
+      "id',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.6862745"
+      "09803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.1607"
+      "8431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.058823"
+      "5294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'User"
+      "DefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'q'}},'ShowContent',true,'Placement',2)},'DisplayPropertyDe"
+      "faults',struct('YLabelReal','','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor"
+      "',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1"
+      " 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.3921568627450"
+      "98 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'Display"
+      "LayoutDimensions',[2 1]),extmgr.Configuration('Tools','Plot Navigation',true,'PreviousAutoscale','XY'),extmgr.Co"
+      "nfiguration('Tools','Measurements',true,'Version','2019b')),'Version','2019b','Position',[951 34 970 948])"
       NumInputPorts	      "2"
       Floating		      off
     }
@@ -3468,26 +3456,6 @@ Model {
       Inputs		      "|++"
     }
     Block {
-      BlockType		      Sum
-      Name		      "Sum2"
-      SID		      "160"
-      Ports		      [2, 1]
-      Position		      [1220, 720, 1240, 740]
-      ZOrder		      179
-      BlockMirror	      on
-      ShowName		      off
-      Commented		      "on"
-      IconShape		      "round"
-      Inputs		      "+|+"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-      Port {
-	PortNumber		1
-	Name			"q cmd"
-      }
-    }
-    Block {
       BlockType		      Terminator
       Name		      "Terminator"
       SID		      "170"
@@ -3530,39 +3498,6 @@ Model {
       MaxDataPoints	      "inf"
       Decimation	      "100"
       SampleTime	      "-1"
-    }
-    Block {
-      BlockType		      Step
-      Name		      "q cmd"
-      SID		      "112"
-      Position		      [1260, 690, 1290, 720]
-      ZOrder		      180
-      BlockMirror	      on
-      Commented		      "on"
-      Time		      "5"
-      SampleTime	      "0"
-      ZeroCross		      off
-      Port {
-	PortNumber		1
-	Name			"q cmd"
-      }
-    }
-    Block {
-      BlockType		      Step
-      Name		      "q cmd1"
-      SID		      "161"
-      Position		      [1260, 750, 1290, 780]
-      ZOrder		      181
-      BlockMirror	      on
-      Commented		      "on"
-      Time		      "5+0.001"
-      After		      "-1"
-      SampleTime	      "0"
-      ZeroCross		      off
-      Port {
-	PortNumber		1
-	Name			"q cmd"
-      }
     }
     Block {
       BlockType		      Step
@@ -3745,7 +3680,7 @@ Model {
       Points		      [42, 0]
       Branch {
 	ZOrder			343
-	Points			[0, 180]
+	Points			[0, 195]
 	DstBlock		"Radians\nto Degrees1"
 	DstPort			1
       }
@@ -3901,25 +3836,6 @@ Model {
 	DstBlock		"To Workspace2"
 	DstPort			1
       }
-    }
-    Line {
-      Name		      "q cmd"
-      ZOrder		      298
-      Labels		      [0, 0]
-      SrcBlock		      "q cmd"
-      SrcPort		      1
-      DstBlock		      "Sum2"
-      DstPort		      1
-    }
-    Line {
-      Name		      "q cmd"
-      ZOrder		      299
-      Labels		      [0, 0]
-      SrcBlock		      "q cmd1"
-      SrcPort		      1
-      Points		      [-25, 0]
-      DstBlock		      "Sum2"
-      DstPort		      2
     }
     Line {
       ZOrder		      344

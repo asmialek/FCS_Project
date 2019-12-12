@@ -36,9 +36,6 @@ global phi psi p q r phi_weight theta_weight psi_weight
 
 alpha = alpha*pi/180;  %convert to radians
 
-% OUTPUTS: trimmed values for states and controls
-% INPUTS:  guess values for thrust, elevator, alpha  (assuming steady level flight)
-
 % Initial Guess for free parameters
 UX0 = [thrust; elevator; alpha; aileron; rudder];  % free parameters: two control values & angle of attack
 
@@ -141,13 +138,13 @@ ElevatorDis = 0; AileronDis = 0;  RudderDis = 0;
 dis_flag = input('Would you like to create a disturbance on a surface (y/n):  ', 's');
 
 if dis_flag == 'y'
-    ElevatorDis = 1;
+    ElevatorDis = 0.2;
     DisEle_1 = ElevatorDis;    DisEle_2 = -2*ElevatorDis;    DisEle_3 = ElevatorDis;
     
-    AileronDis = 0.5;
+    AileronDis = 0.01;
     DisAil_1 = AileronDis;    DisAil_2 = -2*AileronDis;    DisAil_3 = AileronDis;
     
-    RudderDis = 0.5;
+    RudderDis = 0.01;
     DisRud_1 = RudderDis;    DisRud_2 = -2*RudderDis;    DisRud_3 = RudderDis;
 elseif dis_flag == 'n'
     %do nothing

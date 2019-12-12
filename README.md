@@ -22,3 +22,12 @@ To check if the simulation is working properly:
     d. `1`,`y`, `y`, `y`, `n`
     e. `y`
 3. If you see the plots, it should be alright
+
+# Tuning Longitude LQR Controller 
+1. Open `FCS_Project.prj`
+2. Set `F16Sim` as a MATLAB Current Folder
+3. Run `FindF16Dynamics.m` with altitude 15000 and velocity 500
+4. Run `augumentedF16.m`
+5. Open `augumented_SS_F16_Block.mdl` and open the green scope block
+6. Using `lqr_gains.m` and changing lines 15 and 16 find Q and R that provide the smoothest response
+7. Change `theta_cmd` in `augumented_SS_F16_Block.mdl` to test for different step values
