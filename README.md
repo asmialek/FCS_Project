@@ -23,7 +23,7 @@ To check if the simulation is working properly:
     e. `y`
 3. If you see the plots, it should be alright
 
-# Tuning Longitude LQR Controller 
+# Tuning Longitude LQR Controller
 1. Open `FCS_Project.prj`
 2. Set `F16Sim` as a MATLAB Current Folder
 3. Run `FindF16Dynamics.m` with altitude 15000 and velocity 500

@@ -9,7 +9,7 @@
 % 
 %================================================
 
-clear;
+% clear;
 clc;
 
 global fi_flag_Simulink;
@@ -183,6 +183,30 @@ B_aug_long = [          0; B_pr ];
 Q_long = 10*diag([ 2000 0.5 0.2 200 ]);
 R_long = 100;
 K_long = lqr(A_aug_long, B_aug_long, Q_long, R_long);
+
+%% Create a mach controller
+% A_mach = [      0    0.0000
+%            0.0001   -0.0129]
+% A_mach = [A_hi(3,3) A_hi(3,7) A_hi(3,9) A_hi(3,10) A_hi(3,12);
+%           A_hi(7,3) A_hi(7,7) A_hi(7,9) A_hi(7,10) A_hi(7,12);
+%           A_hi(9,3) A_hi(9,7) A_hi(9,9) A_hi(9,10) A_hi(9,12);
+%           A_hi(10,3) A_hi(10,7) A_hi(10,9) A_hi(10,10) A_hi(10,12);
+%           A_hi(12,3) A_hi(12,7) A_hi(12,9) A_hi(12,10) A_hi(12,12)];
+% B_mach = [A_hi(3,16) A_hi(7,16) A_hi(96) A_hi(10,16) A_hi(12,16)]';
+
+A_mach = [A_hi(3,3) A_hi(3,7) A_hi(3,8) ;
+          A_hi(7,3) A_hi(7,7) A_hi(7,8) ;
+          A_hi(8,3) A_hi(8,7) A_hi(8,8) ];
+B_mach = [A_hi(3,13) A_hi(7,13) A_hi(8,13)]';
+
+Ci_mach = [ 1 0 0 ]; % Tracking of `alt cmd` value
+A_aug_mach = [          0  Ci_pr ;
+               zeros(3,1)  A_pr ];
+B_aug_mach = [          0; B_pr ];
+
+Q_mach = 10*diag([ 2000 0.5 0.2 200 ]);
+R_mach = 100;
+K_mach = lqr(A_aug_mach, B_aug_mach, Q_mach, R_mach);
 
 % %% Create a control matrix K
 % size_A = size(A_hi);
