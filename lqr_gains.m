@@ -2,7 +2,6 @@
 
 A_long = A_longitude_hi([2,4,5],[2,4,5]);
 B_long = A_longitude_hi([2,4,5],7);
-
 Ci_long = [ 1 0 0 ]; % Tracking of `q cmd` value
 A_aug_long = [          0  Ci_long ;
                zeros(3,1)  A_long ];
@@ -20,71 +19,25 @@ R_long = 1;
 K_long = lqr(A_aug_long, B_aug_long, Q_long, R_long);
 
 
-%% Create a lateral controller 1 output (psi)
+% Create a lateral controller 2 outputs
 
-A_lat = A_lateral_hi([2,4,6],[2,4,6]);
-B_lat = A_lateral_hi([2,4,6],9);
+A_lat = A_lateral_hi([1,2,4,5,6],[1,2,4,5,6]);
+B_lat = A_lateral_hi([1,2,4,5,6],[8,9]);
 
-Ci_lat = [ 1 0 0 ]; % Tracking of `q cmd` value
+Ci_lat = [ 1 0 0 0 0  ;
+           0 1 0 0 0 ]; % Tracking of `q cmd` value
        
-A_aug_lat = [  0  Ci_lat ;
-               zeros(3,1)  A_lat ];
-B_aug_lat = [         0; B_lat ];
+A_aug_lat = [  zeros(2,2)  Ci_lat ;
+               zeros(5,2)  A_lat ];
+B_aug_lat = [         0 0; 0 0; B_lat ];
 
 %%%%%%%%%%%%%%%%%%%
 %%% TUNE THIS v %%%
 %%%%%%%%%%%%%%%%%%%
-% Q_lat = diag(4);
-% R_lat = 1;
-Q_lat = 10*diag([ 20000 200 0.1 0.1 ]);
-R_lat = 100;
+Q_lat = 10*diag([ 20000 20000 200 200 0.1 0.1 0.1 ]);
+R_lat = 100*diag(2);
+% Q_lat = diag(7);
+% R_lat = diag(2);
 %%%%%%%%%%%%%%%%%%%%
 
-K_lat_psi = lqr(A_aug_lat, B_aug_lat, Q_lat, R_lat);
-
-
-
-%% Create a lateral controller 1 output (phi)
-
-A_lat = A_lateral_hi([1,4,5],[1,4,5]);
-B_lat = A_lateral_hi([1,4,5],8);
-
-Ci_lat = [ 1 0 0 ]; % Tracking of `q cmd` value
-       
-A_aug_lat = [  0  Ci_lat ;
-               zeros(3,1)  A_lat ];
-B_aug_lat = [         0; B_lat ];
-
-%%%%%%%%%%%%%%%%%%%
-%%% TUNE THIS v %%%
-%%%%%%%%%%%%%%%%%%%
-% Q_lat = diag(4);
-% R_lat = 1;
-Q_lat = 10*diag([ 20000 200 0.1 0.1 ]);
-R_lat = 100;
-%%%%%%%%%%%%%%%%%%%%
-
-K_lat_phi = lqr(A_aug_lat, B_aug_lat, Q_lat, R_lat);
-
-%% Create a lateral controller 2 outputs
-% 
-% A_lat = A_lateral_hi([1,2,4,5,6],[1,2,4,5,6]);
-% B_lat = A_lateral_hi([1,2,4,5,6],[8,9]);
-% 
-% Ci_lat = [ 1 0 0 0 0  ;
-%            0 1 0 0 0 ]; % Tracking of `q cmd` value
-%        
-% A_aug_lat = [  zeros(2,2)  Ci_lat ;
-%                zeros(5,2)  A_lat ];
-% B_aug_lat = [         0 0; 0 0; B_lat ];
-% 
-% %%%%%%%%%%%%%%%%%%%
-% %%% TUNE THIS v %%%
-% %%%%%%%%%%%%%%%%%%%
-% Q_lat = 10*diag([ 2000 2000 0.5 0.5 0.2 200 200]);
-% R_lat = 100*diag(2);
-% % Q_lat = diag(7);
-% % R_lat = diag(2);
-% %%%%%%%%%%%%%%%%%%%%
-% 
-% K_lat = lqr(A_aug_lat, B_aug_lat, Q_lat, R_lat);
+K_lat = lqr(A_aug_lat, B_aug_lat, Q_lat, R_lat);
