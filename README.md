@@ -16,9 +16,12 @@
 
 # To tune LQR controllers
 1. Open `lqr_gains.m` and edit Q and R matrices for both controllers
-2. Experiment for different parameters for `setup_sim.m` (you can rerun it whenever you want)
-3. Write down or screenshot how the system reacts to different parameters sets and find the best
-4. Explain why
+2. Run `lqr_gains.m`
+3. Run the simulation
+4. Repeat steps 1-3
+5. Experiment for different parameters for `setup_sim.m` (you can rerun it whenever you want)
+6. Write down or screenshot how the system reacts to different parameters sets and find the best
+7. Explain why
 
 # To compare the models of a Simulink in version control you need to install two Add-Ons:
 - Matlab Report Generator
