@@ -21,6 +21,11 @@ surface3 = 'rud_';
 
 newline;
 
+disp('---------------------');
+disp('runF16Sim');
+disp('---------------------');
+
+
 disp('This is an F-16 Simulation.');
 disp('The simulation will begin by asking you for the flight ');
 disp('conditions for which the simulation will be performed.');
@@ -50,10 +55,11 @@ disp(newline)
 
 %% Ask user which simulation to run.
 %%
-disp('Which model would you like to use to trim the aircraft:')
-disp('  1. Low Fidelity F-16 Trim')
-disp('  2. High Fidelity F-16 Trim')
-fi_flag = input('Your Selection:  ');
+% disp('Which model would you like to use to trim the aircraft:')
+% disp('  1. Low Fidelity F-16 Trim')
+% disp('  2. High Fidelity F-16 Trim')
+% fi_flag = input('Your Selection:  ');
+fi_flag = 2;
 disp(newline);
 disp(newline);
 
@@ -71,8 +77,8 @@ end
 
 %% Trim aircraft to desired altitude and velocity
 %%
-altitude = input('Enter the altitude for the simulation (ft)  :  ');
-velocity = input('Enter the velocity for the simulation (ft/s):  ');
+altitude = altitude;
+velocity = velocity;
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,7 +129,7 @@ alpha = 8.49;           % AOA, degrees
 rudder = -0.01;         % rudder angle, degrees
 aileron = 0.01;         % aileron, degrees
 
-[trim_state, trim_thrust, trim_control, dLEF, UX] = trim_F16(thrust, elevator, alpha, aileron, rudder, velocity, altitude);
+[trim_state, trim_thrust, trim_control, dLEF, UX] = my_trim_F16(thrust, elevator, alpha, aileron, rudder, velocity, altitude);
 
 sim( 'F16Block' ,[TStart TFinal]);
 
@@ -151,9 +157,9 @@ for row = 1 : 1 : length(y_sim(:,1))
 end
 
 fclose(fid_trim);
-
-plot_flag = input('Plot results (y/n):  ', 's');
-
-if plot_flag == 'y'
-  graphF16;
-end
+% 
+% plot_flag = input('Plot results (y/n):  ', 's');
+% 
+% if plot_flag == 'y'
+%   graphF16;
+% end

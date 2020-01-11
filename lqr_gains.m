@@ -1,4 +1,6 @@
 %% Create a longitude controller
+disp(' ')
+disp('Creating controllers')
 
 A_long = A_longitude_hi([2,4,5],[2,4,5]);
 B_long = A_longitude_hi([2,4,5],7);
@@ -18,8 +20,12 @@ R_long = 1;
 
 K_long = lqr(A_aug_long, B_aug_long, Q_long, R_long);
 
+disp(' ')
+disp('Longitude gains:')
+disp(K_long)
 
-% Create a lateral controller 2 outputs
+
+%% Create a lateral controller 2 outputs
 
 A_lat = A_lateral_hi([1,2,4,5,6],[1,2,4,5,6]);
 B_lat = A_lateral_hi([1,2,4,5,6],[8,9]);
@@ -41,3 +47,6 @@ R_lat = 100*diag(2);
 %%%%%%%%%%%%%%%%%%%%
 
 K_lat = lqr(A_aug_lat, B_aug_lat, Q_lat, R_lat);
+
+disp('Lateral gains:')
+disp(K_lat)
